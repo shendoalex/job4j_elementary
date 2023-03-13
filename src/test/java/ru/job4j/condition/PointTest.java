@@ -28,7 +28,7 @@ public class PointTest {
     }
 
     @Test
-    public void when02to10then2() {
+    public void when02to10then2dot23() {
         int x1in = 0;
         int y1in = 2;
         int x2in = 1;
@@ -39,7 +39,7 @@ public class PointTest {
     }
 
     @Test
-    public void when11to22then1() {
+    public void when11to22then1dot41() {
         int x1in = 1;
         int y1in = 1;
         int x2in = 2;
