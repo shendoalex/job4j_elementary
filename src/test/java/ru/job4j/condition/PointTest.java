@@ -7,45 +7,46 @@ public class PointTest {
 
     @Test
     public void when00to20then2() {
-        int x1in = 0;
-        int y1in = 0;
-        int x2in = 2;
-        int y2in = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 0);
         double expected = 2;
-        double out = Point.distance(x1in, y1in, x2in, y2in);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when10to20then1() {
-        int x1in = 1;
-        int y1in = 0;
-        int x2in = 2;
-        int y2in = 0;
+        Point a = new Point(1, 0);
+        Point b = new Point(2, 0);
         double expected = 1;
-        double out = Point.distance(x1in, y1in, x2in, y2in);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when02to10then2dot23() {
-        int x1in = 0;
-        int y1in = 2;
-        int x2in = 1;
-        int y2in = 0;
+        Point a = new Point(0, 2);
+        Point b = new Point(1, 0);
         double expected = 2.23;
-        double out = Point.distance(x1in, y1in, x2in, y2in);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when11to22then1dot41() {
-        int x1in = 1;
-        int y1in = 1;
-        int x2in = 2;
-        int y2in = 2;
+        Point a = new Point(1, 1);
+        Point b = new Point(2, 2);
         double expected = 1.41;
-        double out = Point.distance(x1in, y1in, x2in, y2in);
+        double out = a.distance(b);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when111to221then1dot41() {
+        Point a = new Point(1, 1,1);
+        Point b = new Point(2, 2,1);
+        double expected = 1.41;
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 }
